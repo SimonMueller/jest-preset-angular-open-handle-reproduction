@@ -1,0 +1,56 @@
+{
+  "name": "jest-preset-angular-open-handle-reproduction",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "jest --detectOpenHandles --no-cache"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "13.3.2",
+    "@angular/common": "13.3.2",
+    "@angular/compiler": "13.3.2",
+    "@angular/core": "13.3.2",
+    "@angular/forms": "13.3.2",
+    "@angular/platform-browser": "13.3.2",
+    "@angular/platform-browser-dynamic": "13.3.2",
+    "@angular/router": "13.3.2",
+    "rxjs": "7.5.5",
+    "tslib": "2.3.1",
+    "zone.js": "0.11.5"
+  },
+  "preset": "jest-preset-angular",
+  "devDependencies": {
+    "@angular-devkit/build-angular": "13.3.2",
+    "@angular/cli": "13.3.2",
+    "@angular/compiler-cli": "13.3.2",
+    "@types/jest": "27.4.1",
+    "@types/node": "12.11.1",
+    "jest": "27.5.1",
+    "jest-preset-angular": "11.1.2",
+    "ts-jest": "27.1.4",
+    "typescript": "4.6.3"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/cypress/"
+    ],
+    "preset": "jest-preset-angular",
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupJest.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.spec.json"
+      }
+    }
+  }
+}
